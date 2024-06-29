@@ -1,4 +1,6 @@
 import { server } from "./server/Server";
 
 
-server.listen(3333, () => console.log("listening App Server"));
+server.listen(process.env.PORT || 3333, () => {
+    console.log(`Running on port ${process.env.PORT || 3333}`);
+});
