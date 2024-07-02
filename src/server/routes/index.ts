@@ -5,10 +5,10 @@ const router = Router();
 
 router.get('/', (_, res) => {
 
-    return res.send("Hello, Node!!");
-})
+  return res.send("Hello, Node!!");
+});
 
-router.post('/cities', CitiesController.createBodyValidator, CitiesController.create);
+router.post('/cities', CitiesController.createValidation, CitiesController.create);
 
 
 export { router };
