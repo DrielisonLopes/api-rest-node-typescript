@@ -9,12 +9,12 @@ router.get('/', (_, res) => {
 });
 
 router.get('/cities', CitiesController.getAllValidation, CitiesController.getAll);
-router.get('/cidades/:id', CitiesController.getByIdValidation, CitiesController.getById);
+router.get('/cities/:id', CitiesController.getByIdValidation, CitiesController.getById);
 
 router.post('/cities', CitiesController.createValidation, CitiesController.create);
 
-router.put('/cidades/:id', CitiesController.updateByIdValidation, CitiesController.updateById);
+router.put('/cities/:id', CitiesController.updateByIdValidation, CitiesController.updateById);
 
-router.delete('/cidades/:id', CitiesController.deleteByIdValidation, CitiesController.deleteById);
+router.delete('/cities/:id', CitiesController.deleteByIdValidation, CitiesController.deleteById);
 
 export { router };
