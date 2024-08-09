@@ -26,7 +26,7 @@ export const getAll = async (req: Request<{}, {}, {}, IQueryProps>, res: Respons
     return res.status(StatusCodes.OK).json([
         {
           id: 1,
-          nome: 'Rio de Janeiro',
+          name: 'Rio de Janeiro',
         }
       ]);
 };

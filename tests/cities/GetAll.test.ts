@@ -12,12 +12,12 @@ describe('Cities - GetAll', () => {
 
     expect(res1.statusCode).toEqual(StatusCodes.CREATED);
 
-    const resSearch = await testServer
+    const resSearched = await testServer
       .get('/cities')
       .send();
 
-    expect(Number(resSearch.header['x-total-count'])).toBeGreaterThan(0);
-    expect(resSearch.statusCode).toEqual(StatusCodes.OK);
-    expect(resSearch.body.length).toBeGreaterThan(0);
+    expect(Number(resSearched.header['x-total-count'])).toBeGreaterThan(0);
+    expect(resSearched.statusCode).toEqual(StatusCodes.OK);
+    expect(resSearched.body.length).toBeGreaterThan(0);
   });
 });
